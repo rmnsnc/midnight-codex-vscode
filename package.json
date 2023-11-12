@@ -1,0 +1,67 @@
+{
+    "name": "theme-midnight-codex",
+    "version": "0.0.2",
+    "displayName": "Midnight Codex",
+    "homepage": "https://github.com/rmnsnc/midnight-codex-vscode",
+    "description": "Elegance of darkness meets the precision of code. Designed for the nocturnal coder, this theme is inspired by the mystical allure of a starlit sky at midnight, providing an immersive experience for those who find their muse in the quieter hours.",
+    "publisher": "rmnsnc",
+    "license": "MIT",
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "lint": "node ./scripts/lint.js",
+        "pre:package": "npm run lint && npm run build",
+        "package": "vsce package",
+        "vscode:prepublish": "npm run build",
+        "publish": "vsce publish"
+    },
+    "maintainers": [
+        "Julien Hora"
+    ],
+    "contributors": [
+        "Julien Hora"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rmnsnc/midnight-codex-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rmnsnc/midnight-codex-vscode/issues"
+    },
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "midnight",
+        "codex",
+        "darker",
+        "dark",
+        "black",
+        "theme",
+        "color-theme"
+    ],
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Midnight Codex",
+                "uiTheme": "vs-dark",
+                "path": "./theme/midnight-codex.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0",
+        "prettier": "^3.0.3",
+        "vsce": "^2.15.0"
+    },
+    "__metadata": {
+        "publisherDisplayName": "rmnsnc"
+    }
+}
